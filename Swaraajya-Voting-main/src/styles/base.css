@@ -1,0 +1,117 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 100% 96%;
+    --foreground: 27 56% 25%;
+
+    --card: 39 100% 97%;
+    --card-foreground: 27 56% 25%;
+
+    --popover: 39 100% 97%;
+    --popover-foreground: 27 56% 25%;
+
+    --primary: 27 84% 57%;
+    --primary-foreground: 39 100% 97%;
+
+    --secondary: 33 100% 88%;
+    --secondary-foreground: 27 56% 25%;
+
+    --muted: 33 70% 94%;
+    --muted-foreground: 27 30% 40%;
+
+    --accent: 27 84% 57%;
+    --accent-foreground: 39 100% 97%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 39 100% 97%;
+
+    --border: 33 80% 84%;
+    --input: 33 80% 84%;
+    --ring: 27 84% 57%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 27 56% 25%;
+    --sidebar-foreground: 39 100% 97%;
+    --sidebar-primary: 27 84% 57%;
+    --sidebar-primary-foreground: 39 100% 97%;
+    --sidebar-accent: 27 30% 20%;
+    --sidebar-accent-foreground: 39 100% 97%;
+    --sidebar-border: 27 30% 20%;
+    --sidebar-ring: 27 84% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-amber-900;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Traditional Indian Pattern Background */
+.traditional-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.jali-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.12'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 20.83l2.83-2.83 1.41 1.41L1.41 22H0v-1.17zM0 3.07l2.83-2.83 1.41 1.41L1.41 4.24H0V3.07zm40 14.4L37.17 20l1.41 1.41L40 20v-2.53zm0-17.47L37.17 2.83l1.41 1.41L40 2.83V0h-2.83l-1.41 1.41L38.59 0H40v2.83l-.7.7-1.42-1.42L36.07 0H33.9l1.41 1.41L33.83 0h-2.83l-1.41 1.41L31 0h-2.83l-1.41 1.41L28.34 0h-2.83l-1.41 1.41L25.69 0h-2.83l-1.41 1.41 1.41 1.42h2.83l-1.41-1.42L25.69 0h2.83l1.41 1.41-1.41-1.41h2.83l-1.41 1.41 1.41 1.42h2.83l-1.41-1.42L34.07 0h2.83l1.41 1.41-1.41-1.41h2.83l1.41 1.41 1.42-1.41H40v2.83z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
